@@ -12,7 +12,7 @@ int main(){
   }
   acc = 1;
   for(int i = 2; i <= n1; i++){
-    acc = acc * i;
+    acc *= i;
   }
   printf("%d! é %d\n", n1, acc);
   return 0;

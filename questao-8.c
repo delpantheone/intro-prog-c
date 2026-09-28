@@ -10,10 +10,8 @@ int main(){
   t_vect = sizeof(vect) / sizeof(vect[0]);
   idx = 0;
   for(int i = 0; i < (t_vect - 1) ; i++){
-    // if(vect[idx] <= vect[i+1]) idx = i+1;
     int cond = vect[idx] <= vect[i+1];
-    int mask = -cond;
-    idx = idx ^ ((idx ^ (i+1)) & mask);
+    idx = idx ^ ((idx ^ (i+1)) & -cond);
   }
   printf("O maior número informado foi: %d\n", vect[idx]);
   return 0;
