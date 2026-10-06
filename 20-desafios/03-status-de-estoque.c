@@ -18,11 +18,15 @@ int main(){
   produto.nome = "Abóbora";
   produto.estoque = 2;
 
-  char *opcoes[] = {"Disponível", "Esgotado"};
+  char *opcoes[] = {"esgotado", "disponível"};
 
   bool status = produto_esta_disponivel(produto);
 
   printf("O produto \"%s\" está \"%s\"", produto.nome, opcoes[status]);
+
+  // Versão com ternário
+
+  // printf(status == 1 ? "Produto %s está disponível" : "Produto %s está esgotado", produto.nome);
 
   return 0;
 }
